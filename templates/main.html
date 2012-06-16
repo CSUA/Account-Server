@@ -1,0 +1,25 @@
+<%inherit file="base.html" />
+<h1>Create Account</h1>
+% if len(errors) > 0:
+  <div class="ui-state-error errors">
+    % for error in errors:
+      ${error}<br />
+    % endfor
+  </div>
+% endif 
+<div class="center-box">
+  <form method="POST">
+    <input type="hidden" name="authenticity" value="${this.token}" />
+    <label for="username">Username:</label>
+      <input class="stretch" type="text" id="username" name="username"><br />
+    <label for="pass1">Password:</label>
+      <input class="stretch" type="password" id="pass1" name="pass1"><br />
+    <label for="pass2">Repeat Password:</label>
+      <input class="stretch" type="password" id="pass2" name="pass2"><br />
+    <label for="email1">Email:</label>
+      <input class="stretch" type="text" id="email1" name="email1"><br />
+    <label for="email2">Repeat Email:</label>
+      <input class="stretch" type="text" id="email2" name="email2"><br />
+    <input type="submit" name="button" value="login" />
+  </form>
+</div>

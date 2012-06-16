@@ -1,0 +1,46 @@
+A {
+  text-decoration: none;
+}
+BODY {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: #888;
+  text-align: center;
+}
+
+DIV.main {
+  border-left: 5px #A0FFFF solid;
+  border-right: 5px #A0FFFF solid;
+  border-bottom: 5px #A0FFFF solid;
+  background-color: #F0FFFF;
+}
+
+FORM {
+  text-align: right;
+}
+
+FORM INPUT.stretch {
+  width: 300px;
+}
+
+DIV.center-box {
+  width: 430px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+DIV.errors {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px;
+  width: 400px;
+}
+
+INPUT#logout {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}

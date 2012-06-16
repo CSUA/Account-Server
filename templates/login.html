@@ -1,0 +1,21 @@
+## Mako
+<%inherit file="base.html" />
+<h1>Welcome to the CSUA Account Form</h1>
+<h4>Please log in with your LDAP account:</h4>
+% if len(errors) > 0:
+  <div class="ui-state-error errors">
+    % for error in errors:
+      ${error}<br />
+    % endfor
+  </div>
+% endif
+<div class="center-box">
+<form method="POST">
+  <input type="hidden" name="authenticity" value="${this.token}" />
+  <label for="username">Username:</label>
+    <input class="stretch" type="text" value="${data.username}" id='username' name="username"><br />
+  <label for="password">Password:</label>
+    <input class="stretch" type="password" id='password' name="password"><br />
+  <input type="submit" name="button" value="Login" />
+</form>
+</div>

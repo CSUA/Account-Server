@@ -1,0 +1,25 @@
+<html>
+<head>
+<title>${this.title}</title>
+<script type="text/javascript" src="/static/js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui-1.8.21.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/vader/jquery-ui-1.8.21.custom.css" />
+<script type="text/javascript">
+$(function(){
+  $('input:submit').button(); 
+  $('#logout').button();
+});
+</script>
+</head>
+<body>
+<div class="main">
+${self.body()}
+</div>
+</body>
+% if this.loggedIn:
+<form action='/accountant/logout'>
+<input type="submit" id="logout" value="Log Out" />
+</form>
+% endif
+</html>
