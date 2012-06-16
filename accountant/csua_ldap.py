@@ -11,7 +11,7 @@ ldapTrace = 0
 def getCredentials():
   command = []
   if os.uname()[1] == 'soda':
-    warning('Fix this function')
+    logging.warning('Fix this function')
     command.append('ssh mail')
   command.append('ssh root@soda')
   command.append('cat /etc/libnss-ldap.secret')
