@@ -3,6 +3,7 @@ import accountant
 import web
 
 urls = (
+        '/?', 'index',
         '/accountant', accountant.app,
         '/favicon.ico', 'favicon',
         '/(js|css|images)/(.*)', 'media'
@@ -22,6 +23,11 @@ class media:
       return f.read()
     except:
       return app.notfound()
+
+class index:
+  def GET(this):
+    f = open('templates/index.html', 'r')
+    return f.read()
 
 if __name__ == "__main__":
   app.run()
